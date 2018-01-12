@@ -1,4 +1,5 @@
 name: "MP0"
+timeout: PT5M
 vcs:
   git: true
 students:
