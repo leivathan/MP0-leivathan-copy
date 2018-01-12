@@ -14,8 +14,8 @@ import org.testng.annotations.Test;
 @Test
 public class QuizzerTest {
 
-    /** Testing timeout. */
-    private static final int TEST_TIMEOUT = 1000;
+    /** Testing timeout. Solution takes 38 ms. */
+    private static final int TEST_TIMEOUT = 500;
 
     /**
      * Test with precomputed values.

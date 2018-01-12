@@ -16,7 +16,7 @@ import org.testng.annotations.Test;
 public class LCMTest {
 
     /** Testing timeout. Solution takes 96 ms. */
-    private static final int TEST_TIMEOUT = 10000;
+    private static final int TEST_TIMEOUT = 1000;
 
     /**
      * Test with precomputed values.
