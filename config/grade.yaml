@@ -1,5 +1,6 @@
 name: "MP0"
 timeout: PT5M
+version: 1.0.0
 vcs:
   git: true
 students:
