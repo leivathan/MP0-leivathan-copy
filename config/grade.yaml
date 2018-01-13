@@ -1,6 +1,10 @@
 name: "MP0"
 timeout: PT5M
 version: 1.0.0
+ignoreOutput:
+  - "^java.security.policy: error parsing file.*"
+  - "^Unable to initialize policy entry:.*"
+  - "^.*?expected \\[\\;\\], found \\[priority\\]$"
 vcs:
   git: true
 students:
