@@ -18,6 +18,7 @@ vcs:
 students:
   location: email.txt
   require: true
+  count: 1
   suffix: "@illinois.edu"
 files:
   - "LCM"
