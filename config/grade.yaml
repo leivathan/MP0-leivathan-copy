@@ -1,11 +1,17 @@
 name: "MP0"
-timeout: PT5M
 version: 1.0.0
-run: "./gradlew grade -Pgrade.capture -Pgrade.secure -Pgrade.reporting.file={{ gradeFile }}"
-ignoreOutput:
-  - "^java.security.policy: error parsing file.*"
-  - "^Unable to initialize policy entry:.*"
-  - "^.*?expected \\[\\;\\], found \\[priority\\]$"
+grading:
+  timeout: PT5M
+  run: "./gradlew grade -Pgrade.capture -Pgrade.secure -Pgrade.reporting.file={{ gradeFile }}"
+  ignoreOutput:
+    - "^java.security.policy: error parsing file.*"
+    - "^Unable to initialize policy entry:.*"
+    - "^.*?expected \\[\\;\\], found \\[priority\\]$"
+    - "^WARNING: An illegal reflective access operation has occurred.*"
+    - "^WARNING: Illegal reflective access by org.codehaus.groovy.reflection.CachedClass.*"
+    - "^WARNING: Please consider reporting this to the maintainers.*"
+    - "^WARNING: Use --illegal-access=warn to enable warnings.*"
+    - "^WARNING: All illegal access operations will be denied in a future release.*"
 vcs:
   git: true
 students:
