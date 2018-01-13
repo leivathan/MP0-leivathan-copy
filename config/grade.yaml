@@ -1,6 +1,7 @@
 name: "MP0"
 timeout: PT5M
 version: 1.0.0
+run: "./gradlew grade -Pgrade.capture -Pgrade.secure -Pgrade.reporting.file={{ gradeFile }}"
 ignoreOutput:
   - "^java.security.policy: error parsing file.*"
   - "^Unable to initialize policy entry:.*"
