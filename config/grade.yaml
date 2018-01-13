@@ -12,7 +12,7 @@ grading:
     - "^WARNING: Please consider reporting this to the maintainers.*"
     - "^WARNING: Use --illegal-access=warn to enable warnings.*"
     - "^WARNING: All illegal access operations will be denied in a future release.*"
-    - "^The TaskInternal.execute() method has been deprecated and is scheduled to be removed in Gradle 5.0.*"
+    - "^The TaskInternal.*"
 vcs:
   git: true
 students:
