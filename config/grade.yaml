@@ -13,6 +13,11 @@ grading:
     - "^WARNING: Use --illegal-access=warn to enable warnings.*"
     - "^WARNING: All illegal access operations will be denied in a future release.*"
     - "^The TaskInternal.*"
+scoring:
+  max: 100
+  selectors:
+    - checkstyle
+    - test
 vcs:
   git: true
 students:
