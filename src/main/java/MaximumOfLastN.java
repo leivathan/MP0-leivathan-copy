@@ -24,7 +24,7 @@ public class MaximumOfLastN {
      * @return the maximum of the last N values in the array
      */
     public static double maximumOfLastN(final double[] doubles, final int n) {
-        return;
+        return 0;
     }
 
     /* ********************************************************************************************
