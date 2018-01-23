@@ -37,7 +37,20 @@ public final class Quizzer {
     public static int computeScore(final Boolean diversityAnswerCorrect,
             final Boolean illiacAnswerCorrect, final Boolean mosaicAnswerCorrect,
             final Boolean variableAnswerCorrect) {
-        return 0.0;
+        int pointsEarned = 0
+        if (diversityAnswerCorrect) {
+            pointsEarned += POINTS_PER_QUESTION;
+        }
+        if (illiacAnswerCorrect) {
+            pointsEarned += POINTS_PER_QUESTION;
+        }
+        if (mosaicAnswerCorrect) {
+            pointsEarned += POINTS_PER_QUESTION;
+        }
+        if (variableAnswerCorrect) {
+            pointsEarned += POINTS_PER_QUESTION;
+        }
+        return pointsEarned;
     }
 
     /* *******************************************************************************************
