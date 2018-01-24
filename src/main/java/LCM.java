@@ -38,7 +38,7 @@ public final class LCM {
         if (first == 0 || second == 0) {
             return LCM_INVALID;
         }
-        for (int multiplier = 1; multiplier < greatest; multiplier++) {
+        for (int count = 1; count < greatest; count++) {
             if (tempFirst % greatestCommonFactor != 0 || tempSecond % greatestCommonFactor != 0) {
               // greatest *= multiplier;
                 greatestCommonFactor--;
