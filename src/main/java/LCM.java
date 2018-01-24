@@ -28,32 +28,23 @@ public final class LCM {
      * @see <a href="https://en.wikipedia.org/wiki/Least_common_multiple">Least common multiple</a>
      */
     public static int lcm(final int first, final int second) {
-        int leastCommonMultiple;
-        int greatestCommonFactor;
-        int tempFirst = first;
-        int tempSecond = second;
-        if (first == 0 && second == 0) {
-            leastCommonMultiple = LCM_INVALID;
+        int tempFirst = Math.abs(first);
+        int tempSecond = Math.abs(second);
+        int greatest = tempFirst;
+        if (tempSecond > tempFirst) {
+            greatest = tempSecond;
         }
-        if (first > second && second != 0) {
-            for (int multiplier = 1; tempFirst % second != 0; multiplier++) {
-                tempFirst *= multiplier;
-                greatestCommonFactor = tempFirst * multiplier;
+        int greatestCommonFactor = greatest;
+        if (first == 0 || second == 0) {
+            return LCM_INVALID;
+        }
+        for (int multiplier = 1; multiplier < greatest; multiplier++) {
+            if (tempFirst % greatestCommonFactor != 0 || tempSecond % greatestCommonFactor != 0) {
+              // greatest *= multiplier;
+                greatestCommonFactor--;
             }
         }
-
-        if (second > first && first != 0) {
-            for (int nextMultiplier = 1; tempSecond % first != 0; nextMultiplier++) {
-                tempSecond *= nextMultiplier;
-                greatestCommonFactor = tempSecond * nextMultiplier;
-            }
-        }
-         if (second != 0) {
-            leastCommonMultiple = (first * second) / greatestCommonFactor;
-        } else {
-            leastCommonMultiple = 0;
-        }
-        return leastCommonMultiple;
+        return (tempFirst * tempSecond) / greatestCommonFactor;
     }
 
     /* ********************************************************************************************
