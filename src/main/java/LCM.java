@@ -38,14 +38,14 @@ public final class LCM {
                 tempSecond = tempFirst % tempSecond;
             }
         }
-        if (first != 0 && second != 0) {
+        if (first == 0 && second == 0) {
+            leastCommonMultiple = LCM_INVALID;
+        } else if (first != 0 && second != 0) {
             leastCommonMultiple = (first * second) / greatestCommonFactor;
-        } else if (first == 0 && second != 0) {
-            leastCommonMultiple = 0;
-        } else if (first != 0) {
+        } else if (first == 0) {
             leastCommonMultiple = 0;
         } else {
-            leastCommonMultiple = LCM_INVALID;
+            leastCommonMultiple = 0;
         }
         return leastCommonMultiple;
     }
