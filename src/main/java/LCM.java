@@ -32,18 +32,24 @@ public final class LCM {
         int greatestCommonFactor;
         int tempFirst = first;
         int tempSecond = second;
-        if (first > second && second != 0) {
-            while (tempFirst % tempSecond != 0) {
-                tempFirst = tempSecond;
-                tempSecond = tempFirst % tempSecond;
-            }
-        }
         if (first == 0 && second == 0) {
             leastCommonMultiple = LCM_INVALID;
-        } else if (first != 0 && second != 0) {
+        }
+        if (first > second && second != 0) {
+            for (int multiplier = 1; tempFirst % second != 0; multiplier++) {
+                tempFirst *= multiplier;
+                greatestCommonFactor = tempFirst * multiplier;
+            }
+        }
+
+        if (second > first && first != 0) {
+            for (int nextMultiplier = 1; tempSecond % first != 0; nextMultiplier++) {
+                tempSecond *= nextMultiplier;
+                greatestCommonFactor = tempSecond * nextMultiplier;
+            }
+        }
+         if (second != 0) {
             leastCommonMultiple = (first * second) / greatestCommonFactor;
-        } else if (first == 0) {
-            leastCommonMultiple = 0;
         } else {
             leastCommonMultiple = 0;
         }
