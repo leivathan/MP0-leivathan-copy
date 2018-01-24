@@ -28,7 +28,26 @@ public final class LCM {
      * @see <a href="https://en.wikipedia.org/wiki/Least_common_multiple">Least common multiple</a>
      */
     public static int lcm(final int first, final int second) {
-        return;
+        int leastCommonMultiple;
+        int greatestCommonFactor;
+        int tempFirst = first;
+        int tempSecond = second;
+        if (first > second && second != 0) {
+            while (tempFirst % tempSecond != 0) {
+                tempFirst = tempSecond;
+                tempSecond = tempFirst % tempSecond;
+            }
+        }
+        if (first != 0 && second != 0) {
+            leastCommonMultiple = (first * second) / greatestCommonFactor;
+        } else if (first == 0 && second != 0) {
+            leastCommonMultiple = 0;
+        } else if (first != 0) {
+            leastCommonMultiple = 0;
+        } else {
+            leastCommonMultiple = LCM_INVALID;
+        }
+        return leastCommonMultiple;
     }
 
     /* ********************************************************************************************
