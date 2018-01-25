@@ -10,9 +10,13 @@ import java.util.Scanner;
  * @see <a href="https://cs125.cs.illinois.edu/MP/0/">MP0 Documentation</a>
  */
 public final class LCM {
-
+    /**
+     * Calculates the least common multiple of two numbers.
+     */
     public static final int LCM_INVALID = -1;
-
+    /**
+     * Returns when either number is 0.
+     */
     /**
      * Returns the least common multiple of two integers.
      * <p>

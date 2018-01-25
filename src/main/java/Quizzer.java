@@ -12,9 +12,10 @@ import java.util.regex.Pattern;
  */
 
 public final class Quizzer {
-
+    /**
+     * Computes the score of a quiz.
+     */
     private static final int POINTS_PER_QUESTION = 10;
-
     /**
      * Compute a score based on entered answers.
      * <p>

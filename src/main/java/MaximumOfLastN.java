@@ -24,8 +24,33 @@ public class MaximumOfLastN {
      * @return the maximum of the last N values in the array
      */
     public static double maximumOfLastN(final double[] doubles, final int n) {
-        return 0;
+        int size = doubles.length;
+        if (n <= 0) {
+            return 0.0;
+        }
+        if (size == 0) {
+            return 0.0;
+        }
+        double max = doubles[doubles.length - 1];
+        if (n > doubles.length) {
+            for (int m = doubles.length - 1; m >= 0; m--) {
+                if (doubles[m] > max) {
+                    max = doubles[m];
+                }
+            }
+        } else {
+            for (int i = doubles.length - 1; i > doubles.length - n - 1; i--) {
+                //int nextValue = i - 1;
+                if (doubles[i] > max) {
+                    max = doubles[i];
+                }
+            }
+        }
+
+        return max;
     }
+
+    //if (doubles[i] < doubles[nextValue])
 
     /* ********************************************************************************************
      * You do not need to modify code below this comment.
