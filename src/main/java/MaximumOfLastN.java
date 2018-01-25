@@ -40,7 +40,6 @@ public class MaximumOfLastN {
             }
         } else {
             for (int i = doubles.length - 1; i > doubles.length - n - 1; i--) {
-                //int nextValue = i - 1;
                 if (doubles[i] > max) {
                     max = doubles[i];
                 }
